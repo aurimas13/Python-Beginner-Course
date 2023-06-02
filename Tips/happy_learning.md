@@ -92,54 +92,66 @@ Speaking of hitting a bug, it is inevitable once you start writing complex progr
 
 When debugging, it is important to have a methodological approach to help you find where things are breaking down. Going through your code in the order in which it is executed and making sure each part works is a great way to do this.
 
-Once you have an idea of where things might be breaking down, insert the following line of code into your script import pdb; pdb.set_trace() and run it. This is the Python debugger and will drop you into interactive mode. The debugger can also be run from the command line with python -m pdb <my_file.py>.
+Once you have an idea of where things might be breaking down, insert the following line of code into your script `import pdb`; `pdb.set_trace()` and run it. This is the [Python debugger](https://realpython.com/python-debugging-pdb/) and will drop you into interactive mode. The debugger can also be run from the command line with python -m pdb <my_file.py>.
 
-Make It Collaborative
+# Make It Collaborative
+
 Once things start to stick, expedite your learning through collaboration. Here are some strategies to help you get the most out of working with others.
 
-Tip #6: Surround Yourself With Others Who Are Learning
+## Tip #6: Surround Yourself With Others Who Are Learning
+
 Though coding may seem like a solitary activity, it actually works best when you work together. It is extremely important when you are learning to code in Python that you surround yourself with other people who are learning as well. This will allow you to share the tips and tricks you learn along the way.
 
-Don’t worry if you don’t know anyone. There are plenty of ways to meet others who are passionate about learning Python! Find local events or Meetups or join PythonistaCafe, a peer-to-peer learning community for Python enthusiasts like you!
+Don’t worry if you don’t know anyone. There are plenty of ways to meet others who are passionate about learning Python! Find local events or Meetups or join [PythonistaCafe](https://www.pythonistacafe.com/), a peer-to-peer learning community for Python enthusiasts like you!
 
-Tip #7: Teach
+## Tip #7: Teach
+
 It is said that the best way to learn something is to teach it. This is true when you are learning Python. There are many ways to do this: whiteboarding with other Python lovers, writing blog posts explaining newly learned concepts, recording videos in which you explain something you learned, or simply talking to yourself at your computer. Each of these strategies will solidify your understanding as well as expose any gaps in your understanding.
 
-Tip #8: Pair Program
+## Tip #8: Pair Program
+
 Pair programming is a technique that involves two developers working at one workstation to complete a task. The two developers switch between being the “driver” and the “navigator.” The “driver” writes the code, while the “navigator” helps guide the problem solving and reviews the code as it is written. Switch frequently to get the benefit of both sides.
 
-Pair programming has many benefits: it gives you a chance to not only have someone review your code, but also see how someone else might be thinking about a problem. Being exposed to multiple ideas and ways of thinking will help you in problem solving when you got back to coding on your own.
+[Pair programming](https://en.wikipedia.org/wiki/Pair_programming) has many benefits: it gives you a chance to not only have someone review your code, but also see how someone else might be thinking about a problem. Being exposed to multiple ideas and ways of thinking will help you in problem solving when you got back to coding on your own.
 
-Tip #9: Ask “GOOD” Questions
+## Tip #9: Ask “GOOD” Questions
+
 People always say there is no such thing as a bad question, but when it comes to programming, it is possible to ask a question badly. When you are asking for help from someone who has little or no context on the problem you are trying to solve, its best to ask GOOD questions by following this acronym:
 
-G: Give context on what you are trying to do, clearly describing the problem.
-O: Outline the things you have already tried to fix the issue.
-O: Offer your best guess as to what the problem might be. This helps the person who is helping you to not only know what you are thinking, but also know that you have done some thinking on your own.
-D: Demo what is happening. Include the code, a traceback error message, and an explanation of the steps you executed that resulted in the error. This way, the person helping does not have to try to recreate the issue.
+- G: Give context on what you are trying to do, clearly describing the problem.
+- O: Outline the things you have already tried to fix the issue.
+- O: Offer your best guess as to what the problem might be. This helps the person who is helping you to not only know what you are thinking, but also know that you have done some thinking on your own.
+- D: Demo what is happening. Include the code, a [traceback](https://realpython.com/python-traceback/) error message, and an explanation of the steps you executed that resulted in the error. This way, the person helping does not have to try to recreate the issue.
+
 Good questions can save a lot of time. Skipping any of these steps can result in back-and-forth conversations that can cause conflict. As a beginner, you want to make sure you ask good questions so that you practice communicating your thought process, and so that people who help you will be happy to continue helping you.
 
-Make Something
+# Make Something
+
 Most, if not all, Python developers you speak to will tell you that in order to learn Python, you must learn by doing. Doing exercises can only take you so far: you learn the most by building.
 
-Tip #10: Build Something, Anything
-For beginners, there are many small exercises that will really help you become confident with Python, as well as develop the muscle memory that we spoke about above. Once you have a solid grasp on basic data structures (strings, lists, dictionaries, sets), object-oriented programming, and writing classes, it’s time to start building!
+## Tip #10: Build Something, Anything
 
-What you build is not as important as how you build it. The journey of building is truly what will teach you the most. You can only learn so much from reading Real Python articles and courses. Most of your learning will come from using Python to build something. The problems you will solve will teach you a lot.
+For beginners, there are many small exercises that will really help you become confident with Python, as well as develop the muscle memory that we spoke about above. Once you have a solid grasp on basic data structures (strings, lists, dictionaries, sets), [object-oriented programming](https://realpython.com/python3-object-oriented-programming/), and writing classes, it’s time to start building!
+
+[What you build is not as important as how you build it](https://dbader.org/blog/python-projects-inspiration). The journey of building is truly what will teach you the most. You can only learn so much from reading Real Python articles and courses. Most of your learning will come from using Python to build something. The problems you will solve will teach you a lot.
 
 There are many lists out there with ideas for beginner Python projects. Here are some ideas to get you started:
 
 Number guessing game
 Simple calculator app
-Dice roll simulator
-Bitcoin Price Notification Service
-If you find it difficult to come up with Python practice projects to work on, watch this video. It lays out a strategy you can use to generate thousands of project ideas whenever you feel stuck.
+[Dice roll simulator](https://realpython.com/python-dice-roll/)
+[Bitcoin Price Notification Service](https://realpython.com/python-bitcoin-ifttt/)
 
-Tip #11: Contribute to Open Source
+If you find it difficult to come up with Python practice projects to work on, watch [this video](https://www.youtube.com/watch?v=WWDzzEhlayY). It lays out a strategy you can use to generate thousands of project ideas whenever you feel stuck.
+
+## Tip #11: Contribute to Open Source
+
 In the open-source model, software source code is available publicly, and anyone can collaborate. There are many Python libraries that are open-source projects and take contributions. Additionally, many companies publish open-source projects. This means you can work with code written and produced by the engineers working in these companies.
 
-Contributing to an open-source Python project is a great way to create extremely valuable learning experiences. Let’s say you decide to submit a bugfix request: you submit a “pull request” for your fix to be patched into the code.
+[Contributing to an open-source Python project](https://dbader.org/blog/python-open-source-contributing) is a great way to create extremely valuable learning experiences. Let’s say you decide to submit a bugfix request: you submit a “[pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)” for your fix to be patched into the code.
 
 Next, the project managers will review your work, providing comments and suggestions. This will enable you to learn best practices for Python programming, as well as practice communicating with other developers.
 
-For additional tips and tactics that will help you break into the open-source world, check out the video embedded below:
+# Go Forth and Learn!
+
+***Now that you have these strategies for learning, you are ready to begin your Python journey!***
