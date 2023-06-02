@@ -41,3 +41,5 @@ For additional practice, you can inspect the exercises found in these repositori
 These resources will give you a chance to apply what you've learned and gain more confidence in your Python programming skills.
 
 Happy learning! 🚀
+
+
