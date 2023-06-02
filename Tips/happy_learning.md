@@ -40,33 +40,43 @@ dir(my_string)
 
 The elements returned from dir() are all of the methods (i.e. actions) that you can apply to the element. For example:
 
->>> my_string.upper()
->>> 'I AM A STRING'
+```python 
+my_string.upper()
+'I AM A STRING'
+```
 
 Notice that I called the upper() method. Can you see what it does? It makes all of the letters in the string uppercase!
 
 Learn the type of an element:
 
->>> type(my_string)
->>> str
+```python 
+type(my_string)
+str
+```
 
 Use the built-in help system to get full documentation:
 
->>> help(str)
+```python 
+help(str)
+```
 
 Import libraries and play with them:
 
->>> from datetime import datetime
->>> dir(datetime)
+```python 
+from datetime import datetime
+dir(datetime)
 ['__add__', ..., 'weekday', 'year']  # Truncated for readability
->>> datetime.now()
+datetime.now()
 datetime.datetime(2018, 3, 14, 23, 44, 50, 851904)
+```
 
 Run shell commands:
 
->>> import os
->>> os.system('ls')
+```python 
+import os
+os.system('ls')
 python_hw1.py python_hw2.py README.txt
+```
 
 ## Tip #4: Take Breaks
 
