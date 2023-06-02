@@ -1,32 +1,32 @@
-We at Code Academy are so excited that you have decided to embark on the journey of learning Python! One of the most common questions we receive frombeginners is “What’s the best way to learn Python?”
+We at Code Academy are so excited that you have decided to embark on the journey of learning Python! One of some common questions we receive from beginners is “What’s the best way to learn Python?”
 
 I believe that the first step in learning any programming language is making sure that you understand how to learn. Learning how to learn is arguably the most critical skill involved in computer programming.
 
-Why is knowing how to learn so important? The answer is simple: as languages evolve, libraries are created, and tools are upgraded. Knowing how to learn will be essential to keeping up with these changes and becoming a successful programmer.
+Why is knowing how to learn so important? The answer is simple: as languages evolve, libraries are created, and tools are upgraded. Knowing how to learn will be essential to keeping up with these changes and becoming a successful programmer/developer.
 
-In this article, we will offer several learning strategies that will help jump start your journey of becoming a rockstar Python programmer!
+In this article, I will offer several learning strategies that will help jump start your journey of becoming a rockstar Python programmer/developer!
 
-Free Download: Get a sample chapter from Python Basics: A Practical Introduction to Python 3 to see how you can go from beginner to intermediate in Python with a complete curriculum, up-to-date for Python 3.8.
+# Make It Stick
 
-Make It Stick
 Here are some tips to help you make the new concepts you are learning as a beginner programmer really stick:
 
-Tip #1: Code Everyday
+## Tip #1: Code Everyday
+
 Consistency is very important when you are learning a new language. We recommend making a commitment to code every day. It may be hard to believe, but muscle memory plays a large part in programming. Committing to coding everyday will really help develop that muscle memory. Though it may seem daunting at first, consider starting small with 25 minutes everyday and working your way up from there.
 
-Check out the First Steps With Python Guide for information on setup as well as exercises to get you started.
+Check out the [First Steps With Python Guide](https://realpython.com/python-first-steps/) for further information on setup as well as exercises to get you started additionally.
 
-Tip #2: Write It Out
+## Tip #2: Write It Out
+
 As you progress on your journey as a new programmer, you may wonder if you should be taking notes. Yes, you should! In fact, research suggests that taking notes by hand is most beneficial for long-term retention. This will be especially beneficial for those working towards the goal of becoming a full-time developer, as many interviews will involve writing code on a whiteboard.
 
 Once you start working on small projects and programs, writing by hand can also help you plan your code before you move to the computer. You can save a lot of time if you write out which functions and classes you will need, as well as how they will interact.
 
-Tip #3: Go Interactive!
-Whether you are learning about basic Python data structures (strings, lists, dictionaries, etc.) for the first time, or you are debugging an application, the interactive Python shell will be one of your best learning tools. We use it a lot on this site too!
+## Tip #3: Go Interactive!
 
-To use the interactive Python shell (also sometimes called a “Python REPL”), first make sure Python is installed on your computer. We’ve got a step-by-step tutorial to help you do that. To activate the interactive Python shell, simply open your terminal and run python or python3 depending on your installation. You can find more specific directions here.
+Whether you are learning about basic Python data structures (strings, lists, dictionaries, etc.) for the first time, or you are debugging an application, the interactive Python shell will be one of your best learning tools.
 
-Note: For a full guide to the standard Python REPL, check out The Python Standard REPL: Try Out Code and Ideas Quickly.
+To use the interactive Python shell (also sometimes called a [“Python REPL”](https://realpython.com/interacting-with-python/)), first make sure Python is installed on your computer. To activate the interactive Python shell, simply open your terminal and run `python` or `python3` depending on your installation. You can find more specific directions [here](https://realpython.com/python-first-steps/).
 
 Now that you know how to start the shell, here are a few examples of how you can use the shell when you are learning:
 
@@ -35,19 +35,23 @@ Learn what operations can be performed on an element by using dir():
 >>> my_string = 'I am a string'
 >>> dir(my_string)
 ['__add__', ..., 'upper', 'zfill']  # Truncated for readability
+
 The elements returned from dir() are all of the methods (i.e. actions) that you can apply to the element. For example:
 
 >>> my_string.upper()
 >>> 'I AM A STRING'
-Notice that we called the upper() method. Can you see what it does? It makes all of the letters in the string uppercase! Learn more about these built-in methods under “Manipulating strings” in this tutorial.
+
+Notice that I called the upper() method. Can you see what it does? It makes all of the letters in the string uppercase!
 
 Learn the type of an element:
 
 >>> type(my_string)
 >>> str
+
 Use the built-in help system to get full documentation:
 
 >>> help(str)
+
 Import libraries and play with them:
 
 >>> from datetime import datetime
@@ -55,19 +59,23 @@ Import libraries and play with them:
 ['__add__', ..., 'weekday', 'year']  # Truncated for readability
 >>> datetime.now()
 datetime.datetime(2018, 3, 14, 23, 44, 50, 851904)
+
 Run shell commands:
 
 >>> import os
 >>> os.system('ls')
 python_hw1.py python_hw2.py README.txt
-Tip #4: Take Breaks
+
+## Tip #4: Take Breaks
+
 When you are learning, it is important to step away and absorb the concepts. The Pomodoro Technique is widely used and can help: you work for 25 minutes, take a short break, and then repeat the process. Taking breaks is critical to having an effective study session, particularly when you are taking in a lot of new information.
 
 Breaks are especially important when you are debugging. If you hit a bug and can’t quite figure out what is going wrong, take a break. Step away from your computer, go for a walk, or chat with a friend.
 
 In programming, your code must follow the rules of a language and logic exactly, so even missing a quotation mark will break everything. Fresh eyes make a big difference.
 
-Tip #5: Become a Bug Bounty Hunter
+## Tip #5: Become a Bug Bounty Hunter
+
 Speaking of hitting a bug, it is inevitable once you start writing complex programs that you will run into bugs in your code. It happens to all of us! Don’t let bugs frustrate you. Instead, embrace these moments with pride and think of yourself as a bug bounty hunter.
 
 When debugging, it is important to have a methodological approach to help you find where things are breaking down. Going through your code in the order in which it is executed and making sure each part works is a great way to do this.
