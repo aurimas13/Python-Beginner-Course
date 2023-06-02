@@ -32,9 +32,11 @@ Now that you know how to start the shell, here are a few examples of how you can
 
 Learn what operations can be performed on an element by using dir():
 
->>> my_string = 'I am a string'
->>> dir(my_string)
+``python 
+my_string = 'I am a string'
+dir(my_string)
 ['__add__', ..., 'upper', 'zfill']  # Truncated for readability
+```
 
 The elements returned from dir() are all of the methods (i.e. actions) that you can apply to the element. For example:
 
