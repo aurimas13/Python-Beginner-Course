@@ -34,7 +34,7 @@ In the Tips section, you'll find a set of general guidelines and strategies to m
 
 For additional practice, you can inspect the exercises found in these repositories and websites:
 
-- [🧠 LeetCode Python Solutions](https://github.com/aurimas13/Solutions-To-Problems/tree/main/LeetCode/Python%20Solutions)
+- [🧠 Solved ~400 Python Solutions](https://github.com/aurimas13/Solutions-To-Problems/tree/main/LeetCode/Python%20Solutions)
 - [🔰 python1lygis](https://github.com/DonatasNoreika/python1lygis)
 - [⏳ Random Python Problems](https://leetcode.com/problemset/all/)
 
