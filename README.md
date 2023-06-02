@@ -1,0 +1,1 @@
+Hello to a Python beginner course repository.
