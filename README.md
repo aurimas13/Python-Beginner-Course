@@ -35,8 +35,8 @@ In the Tips section, you'll find a set of general guidelines and strategies to m
 For additional practice, you can inspect the exercises found in these repositories and websites:
 
 - [🧠 Solved ~400 Python Solutions](https://github.com/aurimas13/Solutions-To-Problems/tree/main/LeetCode/Python%20Solutions)
-- [🔰 Python 1 Level (Lithuanian)](https://github.com/DonatasNoreika/python1lygis)
 - [⏳ Random Python Problems](https://leetcode.com/problemset/all/)
+- [🔰 Python 1 Level (Lithuanian) from colleague -  Old](https://github.com/DonatasNoreika/python1lygis)
 
 These resources will give you a chance to apply what you've learned and gain more confidence in your Python programming skills.
 
