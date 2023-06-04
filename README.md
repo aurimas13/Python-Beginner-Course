@@ -1,10 +1,9 @@
-# 🐍 Python Beginner Course 🎓
-
 <p align=center>
   <img height="222px" src="https://github.com/aurimas13/CodeAcademy-AI-Course/blob/main/Public/Photo/CodeAcademy_baltas.png"/>
 </p>
 <p align="center" > 🐍 <b>Python Beginner Course</b> 🎓 </p>
 <p align="center" > <i> Welcome to the Python Beginner Course tailored by me at Code Academy!</i> </p>
+
 <br>
 <p align=center>
     <a href="https://github.com/aurimas13//aurimas13/Python-Beginner-Course/tree/main/Programs"><img alt="python" src="https://img.shields.io/badge/language-python-blue.svg?style=social&logo=python")></a>
