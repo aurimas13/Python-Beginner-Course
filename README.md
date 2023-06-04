@@ -1,6 +1,18 @@
 # 🐍 Python Beginner Course 🎓
 
-Welcome to the Python Beginner Course tailored by me at Code Academy! 🎉
+<p align=center>
+  <img height="222px" src="https://github.com/aurimas13/CodeAcademy-AI-Course/blob/main/Public/Photo/CodeAcademy_baltas.png"/>
+</p>
+<p align="center" > 🐍 <b>Python Beginner Course</b> 🎓 </p>
+<p align="center" > <i> Welcome to the Python Beginner Course tailored by me at Code Academy!</i> </p>
+<br>
+<p align=center>
+    <a href="https://github.com/aurimas13//aurimas13/Python-Beginner-Course/tree/main/Programs"><img alt="python" src="https://img.shields.io/badge/language-python-blue.svg?style=social&logo=python")></a>
+    <a href="https://img.shields.io/github/last-commit/aurimas13/Python-Beginner-Course"><img alt="lastcommit" src="https://img.shields.io/github/last-commit/aurimas13/Python-Beginner-Course?style=social"/></a>
+    <a href="https://img.shields.io/github/stars/aurimas13/Python-Beginner-Course"><img alt="stars" src="https://img.shields.io/github/stars/aurimas13/Python-Beginner-Course?style=social"/></a>
+    <a href="https://img.shields.io/github/forks/aurimas13/Python-Beginner-Course"><img alt="twitter" src="https://img.shields.io/github/forks/aurimas13/Python-Beginner-Course?style=social"/></a>
+    <a href="https://twitter.com/anausedas"><img alt="twitter" src="https://img.shields.io/twitter/follow/anausedas?style=social"/></a>
+</p>
 
 This course is designed to help you embark on your exciting Python learning journey. Whether you're an absolute beginner or have some prior programming experience, this course aims to provide a solid foundation in Python programming.
 
