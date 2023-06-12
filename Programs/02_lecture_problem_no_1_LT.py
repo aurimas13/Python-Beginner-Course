@@ -7,3 +7,4 @@ elif a == b:
     print("a lygu b")
 else:
     print("a didesnis už b")
+
