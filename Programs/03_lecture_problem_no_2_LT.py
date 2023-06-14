@@ -14,3 +14,4 @@ print("Aštuonios valandos pirmyn: ", astuonios_valandos_pirmyn)
 
 # Atspausdiname dabartinę datą ir laiką tokiu formatu: 2019 03 08, 09:57:17
 print("Dabartinė data ir laikas formatu 'YYYY MM DD, HH:MM:SS': ", dabar.strftime('%Y %m %d, %H:%M:%S'))
+

@@ -31,3 +31,4 @@ try:
     print("Sekundžių: ", sekundes)
 except ValueError:
     print("Klaida: neteisingas datos ir laiko formatas. Turėtų būti 'YYYY-MM-DD HH:MM:SS'.")
+
