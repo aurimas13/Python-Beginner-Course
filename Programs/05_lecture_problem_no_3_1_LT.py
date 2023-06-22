@@ -1,42 +1,48 @@
-class Sentence:
-    def __init__(self, text="default"):  # Use a default text if no text is provided
+import re  # Importuojame reguliariųjų išraiškų (regex) modulį
+
+class Sakinys:
+    # Konstruktorius, kuris priima tekstą. Jei tekstas nenurodomas, naudojamas numatytasis tekstas "Pasaulis yra mano"
+    def __init__(self, text="Pasaulis yra mano"):  
         self.text = text
 
-    def reverse_text(self):  # Method to return the text in reverse
+    # Metodas, kuris grąžina tekstą atvirkštine tvarka
+    def reverse_text(self):  
         return self.text[::-1]
 
-    def to_lowercase(self):  # Method to return the text in lowercase
+    # Metodas, kuris grąžina tekstą mažosiomis raidėmis
+    def to_lowercase(self):  
         return self.text.lower()
 
-    def to_uppercase(self):  # Method to return the text in uppercase
+    # Metodas, kuris grąžina tekstą didžiosiomis raidėmis
+    def to_uppercase(self):  
         return self.text.upper()
 
-    def get_word_by_index(self, index):  # Method to return a word by its order number in the sentence
-        words = self.text.split()  # Split the text into words
-        if index < len(words):  # Check if the index is within the range
-            return words[index]  # Return the word at the given index
-        return "Index out of range"  # Return an error message if index is out of range
+    # Metodas, kuris grąžina žodį pagal jo numerį sakinio žodžių sekoje, kur indeksas yra 1
+    def get_word_by_index(self, index=1):  
+        words = self.text.split()  # Skaidome tekstą į žodžius
+        if index < len(words):  # Tikriname, ar indeksas yra reikšmių ribose
+            return words[index]  # Grąžiname žodį pagal nurodytą indeksą
+        return "Indeksas yra už ribų"  # Grąžiname klaidos pranešimą, jei indeksas yra už ribų
 
-    def count_occurrences(self, item):  # Method to return the count of a specified character or word in the text
+    # Metodas, kuris grąžina nurodyto simbolio ar žodžio pasikartojimų tekste skaičių
+    def count_occurrences(self, item):  
         return self.text.count(item)
 
-    def replace_item(self, old_item, new_item):  # Method to return the text with a specified word or character replaced
+    # Metodas, kuris grąžina tekstą, kuriame nurodytas žodis ar simbolis pakeistas nauju, kur old_item yra "Jonas", o new_item yra "Simas"
+    def replace_item(self, old_item="Jonas", new_item="Simas"):  
         return self.text.replace(old_item, new_item)
 
-    def print_info(self):  # Method to print the number of words, numbers, uppercase and lowercase letters in the sentence
-        words = len(re.findall(r'\b\w+\b', self.text))  # Count the words
-        numbers = len(re.findall(r'\b\d+\b', self.text))  # Count the numbers
-        uppercase = len(re.findall(r'[A-Z]', self.text))  # Count the uppercase letters
-        lowercase = len(re.findall(r'[a-z]', self.text))  # Count the lowercase letters
+    # Metodas, kuris atspausdina žodžių, skaičių, didžiųjų ir mažųjų raidžių sakinio skaičių
+    def print_info(self):  
+        words = len(re.findall(r'\b\w+\b', self.text))  # Skaičiuojame žodžius
+        numbers = len(re.findall(r'\b\d+\b', self.text))  # Skaičiuojame skaičius
+        uppercase = len(re.findall(r'[A-Z]', self.text))  # Skaičiuojame didžiąsias raides
+        lowercase = len(re.findall(r'[a-z]', self.text))  # Skaičiuojame mažąsias raides
 
-        print(f"Words: {words}, Numbers: {numbers}, Uppercase: {uppercase}, Lowercase: {lowercase}")  # Print the information
+        # Atspausdiname informaciją
+        print(f"Žodžiai: {words}, Skaičiai: {numbers}, Didžiosios raidės: {uppercase}, Mažosios raidės: {lowercase}")
 
-# Creating and testing an object with default text
-s = Sentence()
-print(s.reverse_text())
-print(s.to_lowercase())
-print(s.to_uppercase())
-print(s.get_word_by_index(1))
-print(s.count_occurrences('a'))
-print(s.replace_item('a', 'b'))
-s.print_info()
+
+if __name__ == "__main__":
+    s = Sakinys("As esu Aurimas")
+    s.print_info()

@@ -1,5 +1,7 @@
 import re
 
+print("Hello, world!")
+
 class Sakinys:
     def __init__(self, tekstas="numatytasis"):  # Sukuriamas objektas su numatytuoju tekstu, jei tekstas nėra pateiktas
         self.tekstas = tekstas
@@ -34,4 +36,9 @@ class Sakinys:
         didziosios = len(re.findall(r'[A-Z]', self.tekstas))  # Skaičiuojamos didžiosios raidės
         mazosios = len(re.findall(r'[a-z]', self.tekstas))  # Skaičiuojamos mažosios raidės
 
-        print(f"Žodžiai: {zodziai}, Skaičiai: {skaiciai}, Didžiosios: {didziosios}, Mažosios: {mazosios}")
+        print(f"Žodžiai: {zodziai}, Skaičiai: {skaiciai}, Didžiosios: {didziosios}, Mažosios: {mazosios}")  
+        
+
+if __name__ == '__main__':
+    s = Sakinys("As esu Aurimas")
+    s.print_info()
