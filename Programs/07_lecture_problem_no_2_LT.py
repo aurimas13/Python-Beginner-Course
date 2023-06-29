@@ -1,38 +1,29 @@
-# Import necessary module for writing to a file
-import os
+# Ask the user to input the number of lines they want to enter
+num_lines = int(input("Enter the number of lines you want to input: "))
 
-# Ask the user to enter the desired name of the file
-filename = input("Enter the desired name of the file: ")
+# Ask the user for the name of the file they want to create
+filename = input("Enter the name of the file you want to create: ")
 
-# Make sure the filename is valid
-filename = "".join(c for c in filename if c.isalnum() or c in (' ', '.', '_'))
+# Open the file for writing
+with open(filename, 'w') as file:
+    # Initialize the counter for the number of lines
+    count = 0
 
-# Add .txt extension to the filename if it doesn't have one
-if not filename.endswith(".txt"):
-    filename += ".txt"
-
-# Ask the user to enter the desired number of lines
-num_lines = int(input("Enter the desired number of lines: "))
-
-# Initialize a counter
-counter = 0
-
-# Open the file in write mode
-with open(filename, 'w') as f:
-    # Start a while loop
-    while counter < num_lines:
+    # Use a while loop to take input from the user
+    while count < num_lines:
         # Ask the user to enter a line of text
-        text = input("Enter a line of text or press ENTER to finish: ")
+        text = input("Enter a line of text (or just press ENTER to quit): ")
 
-        # If the user presses ENTER (input is empty), break the loop
+        # Check if the user pressed just ENTER (empty input)
+        # If so, break the loop
         if text == '':
             break
 
-        # Write the entered text into the file
-        f.write(text + '\n')
+        # Write the text to the file, followed by a newline character
+        file.write(text + '\n')
 
         # Increment the counter
-        counter += 1
+        count += 1
 
-# Let the user know the file has been created
-print(f"File '{filename}' has been created in {os.getcwd()} with {counter} lines.")
+# Inform the user that the file has been created
+print(f"The file '{filename}' has been created with your input.")

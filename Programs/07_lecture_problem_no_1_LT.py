@@ -1,63 +1,72 @@
-# Sukuriame tėvinę klasę Įrašas su savybe suma
-class Irasas:
-    def __init__(self, suma):
-        self.suma = suma  # Priskiriamas sumos kintamasis
+# Import the datetime class from the datetime module
+from datetime import datetime
 
-# Sukuriame klasę Pajamų Įrašas, kuri paveldi savybes iš tėvinės klasės Įrašas
-class PajamuIrasas(Irasas):
-    def __init__(self, suma, siuntejas, papildoma_informacija):
-        super().__init__(suma)  # Naudojame super(), kad priskirtume sumą iš tėvinės klasės
-        self.siuntejas = siuntejas  # Priskiriamas siuntėjo kintamasis
-        self.papildoma_informacija = papildoma_informacija  # Priskiriama papildoma informacija
+# Define the full text of "Zen of Python"
+zen_of_python = """Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now."""
 
-# Sukuriame klasę Išlaidų Įrašas, kuri paveldi savybes iš tėvinės klasės Įrašas
-class IslaiduIrasas(Irasas):
-    def __init__(self, suma, atsiskaitymo_budas, isigyta_preke_paslauga):
-        super().__init__(suma)  # Naudojame super(), kad priskirtume sumą iš tėvinės klasės
-        self.atsiskaitymo_budas = atsiskaitymo_budas  # Priskiriamas atsiskaitymo būdas
-        self.isigyta_preke_paslauga = isigyta_preke_paslauga  # Priskiriama įsigyta prekė ar paslauga
+# Write the text to a file named "Tekstas.txt"
+with open("Tekstas.txt", "w") as file:
+    file.write(zen_of_python)
 
-# Sukuriame klasę Biudžetas
-class Biudzetas:
-    def __init__(self):
-        self.zurnalas = []  # Priskiriamas tuščias sąrašas žurnalui
+# Read the text from the file and print it
+with open("Tekstas.txt", "r") as file:
+    print(file.read())
 
-    # Funkcija, leidžianti pridėti įrašą į žurnalą
-    def prideti_irasa(self, irasas):
-        self.zurnalas.append(irasas)  # Įrašas pridedamas į žurnalą
+# Append the current date and time to the last line of the file
+with open("Tekstas.txt", "a") as file:
+    file.write('\n' + datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
 
-    # Funkcija, leidžianti gauti balansą
-    def gauti_balansa(self):
-        balansas = 0  # Pradinis balansas nustatomas 0
-        # Iteruojame per visus įrašus žurnale
-        for irasas in self.zurnalas:
-            # Tikriname, ar įrašas yra pajamų įrašas
-            if isinstance(irasas, PajamuIrasas):
-                balansas += irasas.suma  # Jei taip, pridedame sumą prie balanso
-            # Tikriname, ar įrašas yra išlaidų įrašas
-            elif isinstance(irasas, IslaiduIrasas):
-                balansas -= irasas.suma  # Jei taip, atimame sumą iš balanso
-        return balansas  # Grąžiname galutinį balansą
+# Read the text from the file, number each line and replace "Beautiful is better than ugly." 
+with open("Tekstas.txt", "r") as file:
+    lines = file.readlines()
 
-    # Funkcija, leidžianti gauti ataskaitą
-    def gauti_ataskaita(self):
-        # Iteruojame per visus įrašus žurnale
-        for irasas in self.zurnalas:
-            # Tikriname, ar įrašas yra pajamų įrašas
-            if isinstance(irasas, PajamuIrasas):
-                # Jei taip, spausdiname visą informaciją apie pajamų įrašą
-                print(f"Pajamos: {irasas.suma}, Siuntėjas: {irasas.siuntejas}, Papildoma informacija: {irasas.papildoma_informacija}")
-            # Tikriname, ar įrašas yra išlaidų įrašas
-            elif isinstance(irasas, IslaiduIrasas):
-                # Jei taip, spausdiname visą informaciją apie išlaidų įrašą
-                print(f"Išlaidos: {irasas.suma}, Atsiskaitymo būdas: {irasas.atsiskaitymo_budas}, Įsigyta prekė/paslauga: {irasas.isigyta_preke_paslauga}")
+with open("Tekstas.txt", "w") as file:
+    for index, line in enumerate(lines, start=1):
+        if "Beautiful is better than ugly." in line:
+            line = "Gražu yra geriau nei bjauru.\n"
+        file.write(f"{index} {line}")
 
-# Testavimas
-biudzetas = Biudzetas()  # Sukuriamas biudžeto objektas
-# Pridedamas pajamų įrašas į biudžetą
-biudzetas.prideti_irasa(PajamuIrasas(500, "Jonas", "Atlyginimas"))
-# Pridedamas išlaidų įrašas į biudžetą
-biudzetas.prideti_irasa(IslaiduIrasas(200, "Grynaisiais", "Maistas"))
-biudzetas.gauti_ataskaita()  # Spausdinama ataskaita
-# Spausdinamas galutinis balansas
-print(f"Balansas: {biudzetas.gauti_balansa()}")
+# Read the text from the file and print it in reverse
+with open("Tekstas.txt", "r") as file:
+    lines = file.readlines()
+    for line in reversed(lines):
+        print(line, end="")
+
+# Count words, numbers, uppercase letters and lowercase letters in the file
+word_count = 0
+number_count = 0
+uppercase_count = 0
+lowercase_count = 0
+with open("Tekstas.txt", "r") as file:
+    for line in file:
+        for char in line:
+            if char.isalpha():
+                if char.isupper():
+                    uppercase_count += 1
+                else:
+                    lowercase_count += 1
+            elif char.isdigit():
+                number_count += 1
+        word_count += len(line.split())
+
+print(f"\nWords: {word_count}, Numbers: {number_count}, Uppercase letters: {uppercase_count}, Lowercase letters: {lowercase_count}")
+
+# Copy the contents of the file to a new file in uppercase
+with open("Tekstas.txt", "r") as original_file:
+    with open("Tekstas_uppercase.txt", "w") as new_file:
+        new_file.write(original_file.read().upper())

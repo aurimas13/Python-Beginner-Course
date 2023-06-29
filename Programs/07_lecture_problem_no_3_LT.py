@@ -1,63 +1,33 @@
-# Sukuriame tėvinę klasę Įrašas su savybe suma
-class Irasas:
-    def __init__(self, suma):
-        self.suma = suma  # Priskiriamas sumos kintamasis
+# Import the os module to interact with the operating system
+import os
+# Import the datetime class from the datetime module
+from datetime import datetime
 
-# Sukuriame klasę Pajamų Įrašas, kuri paveldi savybes iš tėvinės klasės Įrašas
-class PajamuIrasas(Irasas):
-    def __init__(self, suma, siuntejas, papildoma_informacija):
-        super().__init__(suma)  # Naudojame super(), kad priskirtume sumą iš tėvinės klasės
-        self.siuntejas = siuntejas  # Priskiriamas siuntėjo kintamasis
-        self.papildoma_informacija = papildoma_informacija  # Priskiriama papildoma informacija
+# Get the path to the user's desktop
+desktop_path = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 
-# Sukuriame klasę Išlaidų Įrašas, kuri paveldi savybes iš tėvinės klasės Įrašas
-class IslaiduIrasas(Irasas):
-    def __init__(self, suma, atsiskaitymo_budas, isigyta_preke_paslauga):
-        super().__init__(suma)  # Naudojame super(), kad priskirtume sumą iš tėvinės klasės
-        self.atsiskaitymo_budas = atsiskaitymo_budas  # Priskiriamas atsiskaitymo būdas
-        self.isigyta_preke_paslauga = isigyta_preke_paslauga  # Priskiriama įsigyta prekė ar paslauga
+# Define the directory name
+directory_name = "Naujas Katalogas"
 
-# Sukuriame klasę Biudžetas
-class Biudzetas:
-    def __init__(self):
-        self.zurnalas = []  # Priskiriamas tuščias sąrašas žurnalui
+# Create the directory on the desktop
+new_directory_path = os.path.join(desktop_path, directory_name)
+os.makedirs(new_directory_path, exist_ok=True)
 
-    # Funkcija, leidžianti pridėti įrašą į žurnalą
-    def prideti_irasa(self, irasas):
-        self.zurnalas.append(irasas)  # Įrašas pridedamas į žurnalą
+# Define the file name
+file_name = "DataIrLaikas.txt"
 
-    # Funkcija, leidžianti gauti balansą
-    def gauti_balansa(self):
-        balansas = 0  # Pradinis balansas nustatomas 0
-        # Iteruojame per visus įrašus žurnale
-        for irasas in self.zurnalas:
-            # Tikriname, ar įrašas yra pajamų įrašas
-            if isinstance(irasas, PajamuIrasas):
-                balansas += irasas.suma  # Jei taip, pridedame sumą prie balanso
-            # Tikriname, ar įrašas yra išlaidų įrašas
-            elif isinstance(irasas, IslaiduIrasas):
-                balansas -= irasas.suma  # Jei taip, atimame sumą iš balanso
-        return balansas  # Grąžiname galutinį balansą
+# Create the file with today's date and time inside the new directory
+file_path = os.path.join(new_directory_path, file_name)
+with open(file_path, 'w') as file:
+    # Write the current date and time to the file
+    file.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
-    # Funkcija, leidžianti gauti ataskaitą
-    def gauti_ataskaita(self):
-        # Iteruojame per visus įrašus žurnale
-        for irasas in self.zurnalas:
-            # Tikriname, ar įrašas yra pajamų įrašas
-            if isinstance(irasas, PajamuIrasas):
-                # Jei taip, spausdiname visą informaciją apie pajamų įrašą
-                print(f"Pajamos: {irasas.suma}, Siuntėjas: {irasas.siuntejas}, Papildoma informacija: {irasas.papildoma_informacija}")
-            # Tikriname, ar įrašas yra išlaidų įrašas
-            elif isinstance(irasas, IslaiduIrasas):
-                # Jei taip, spausdiname visą informaciją apie išlaidų įrašą
-                print(f"Išlaidos: {irasas.suma}, Atsiskaitymo būdas: {irasas.atsiskaitymo_budas}, Įsigyta prekė/paslauga: {irasas.isigyta_preke_paslauga}")
+# Get the file's creation time and size in bytes
+creation_time = os.stat(file_path).st_ctime
+file_size = os.stat(file_path).st_size
 
-# Testavimas
-biudzetas = Biudzetas()  # Sukuriamas biudžeto objektas
-# Pridedamas pajamų įrašas į biudžetą
-biudzetas.prideti_irasa(PajamuIrasas(500, "Jonas", "Atlyginimas"))
-# Pridedamas išlaidų įrašas į biudžetą
-biudzetas.prideti_irasa(IslaiduIrasas(200, "Grynaisiais", "Maistas"))
-biudzetas.gauti_ataskaita()  # Spausdinama ataskaita
-# Spausdinamas galutinis balansas
-print(f"Balansas: {biudzetas.gauti_balansa()}")
+# Convert the creation time to a readable format
+creation_time_formatted = datetime.fromtimestamp(creation_time).strftime('%Y-%m-%d %H:%M:%S')
+
+# Print the file's creation time and size
+print(f"The file '{file_name}' was created on {creation_time_formatted} and has a size of {file_size} bytes.")
