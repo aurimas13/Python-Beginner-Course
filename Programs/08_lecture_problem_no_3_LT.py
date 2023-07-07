@@ -1,26 +1,17 @@
-# Import the necessary libraries
-import os
-from datetime import datetime
-import time
+# Given list
+sarasas = [2.5, 2, "Labas", True, 5, 7, 8, 2.8, "Vakaras"]
 
-# Define the path to the new directory on the desktop
-desktop = os.path.expanduser("~/Desktop")  # Gets the path to the user's desktop
-directory = os.path.join(desktop, "Naujas Katalogas")  # Join the path to the desktop with the new directory name
+# Step 2: Calculate and print the sum of all the numbers in the list.
+# Note: In Python, boolean True is also considered as 1 when performing arithmetic calculations.
+numbers = [x for x in sarasas if isinstance(x, (int, float))]
+sum_of_numbers = sum(numbers)
+print("Sum of all numbers:", sum_of_numbers)
 
-# Create the new directory
-os.makedirs(directory, exist_ok=True)  # Creates the directory. The exist_ok parameter allows the directory to be created even if it already exists
+# Step 3: Concatenate and print all the words in the list.
+words = [x for x in sarasas if isinstance(x, str)]
+concatenated_words = " ".join(words)
+print("Concatenated words:", concatenated_words)
 
-# Define the path to the new text file in the new directory
-file_path = os.path.join(directory, "data.txt")
-
-# Write the current date and time to the new file
-with open(file_path, "w") as file:
-    file.write(str(datetime.now()))  # Write the current date and time to the file
-
-# Get the creation time and size of the file
-creation_time = os.stat(file_path).st_ctime  # Get the creation time of the file
-size = os.stat(file_path).st_size  # Get the size of the file in bytes
-
-# Print the creation time (converted from seconds since epoch to a string) and size
-print("Creation time:", time.ctime(creation_time))
-print("Size:", size, "bytes")
+# Step 4: Count and print how many boolean variables in the list have the value True.
+true_count = sum(1 for x in sarasas if isinstance(x, bool) and x is True)
+print("Count of boolean True values:", true_count)
