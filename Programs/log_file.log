@@ -1,0 +1,31 @@
+2023-07-24 17:36:39,418, INFO, Skaiciu (1, 2, 3, 4, 5) suma lygi: 15
+2023-07-24 17:36:39,419, ERROR, Išimtis TypeError kilo bandant suskaičiuoti sumą: unsupported operand type(s) for +: 'int' and 'str'
+2023-07-24 17:36:39,419, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:39,419, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:39,419, INFO, Sakinio 'Labas, pasauli!' simbolių kiekis yra: 15
+2023-07-24 17:36:39,419, INFO, Rezultatas, kai 10 padaliname iš 2, yra: 5.0
+2023-07-24 17:36:39,419, ERROR, Išimtis ZeroDivisionError kilo dalybos metu: Dalyba iš nulio negalima.
+2023-07-24 17:36:47,301, INFO, Skaiciu (1, 2, 3, 4, 5) suma lygi: 15
+2023-07-24 17:36:47,302, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:47,302, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:47,302, INFO, Sakinio 'Labas, pasauli!' simbolių kiekis yra: 15
+2023-07-24 17:36:47,302, INFO, Rezultatas, kai 10 padaliname iš 2, yra: 5.0
+2023-07-24 17:36:47,302, ERROR, Išimtis kilo dalybos metu: division by zero
+Traceback (most recent call last):
+  File "/Users/aurimasnausedas/Documents/Python_Beginner_Course_new/Programs/13_lecture_problem_no_2_LT.py", line 37, in divide
+    result = x / y
+             ~~^~~
+ZeroDivisionError: division by zero
+2023-07-24 17:36:52,192, INFO, Skaiciu (1, 2, 3, 4, 5) suma lygi: 15
+2023-07-24 17:36:52,192, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:52,192, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:52,192, INFO, Sakinio 'Labas, pasauli!' simbolių kiekis yra: 15
+2023-07-24 17:36:52,192, INFO, Rezultatas, kai 10 padaliname iš 2, yra: 5.0
+2023-07-24 17:36:52,192, ERROR, Išimtis ZeroDivisionError kilo dalybos metu: Dalyba iš nulio negalima.
+2023-07-24 17:36:55,642, INFO, Skaiciu (1, 2, 3, 4, 5) suma lygi: 15
+2023-07-24 17:36:55,643, ERROR, Išimtis TypeError kilo bandant suskaičiuoti sumą: unsupported operand type(s) for +: 'int' and 'str'
+2023-07-24 17:36:55,643, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:55,643, INFO, Skaičiaus 16 šaknis yra: 4.0
+2023-07-24 17:36:55,643, INFO, Sakinio 'Labas, pasauli!' simbolių kiekis yra: 15
+2023-07-24 17:36:55,643, INFO, Rezultatas, kai 10 padaliname iš 2, yra: 5.0
+2023-07-24 17:36:55,643, ERROR, Išimtis ZeroDivisionError kilo dalybos metu: Dalyba iš nulio negalima.
