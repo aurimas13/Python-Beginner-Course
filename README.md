@@ -10,7 +10,7 @@
     <a href="https://img.shields.io/github/last-commit/aurimas13/Python-Beginner-Course"><img alt="lastcommit" src="https://img.shields.io/github/last-commit/aurimas13/Python-Beginner-Course?style=social"/></a>
     <a href="https://img.shields.io/github/stars/aurimas13/Python-Beginner-Course"><img alt="stars" src="https://img.shields.io/github/stars/aurimas13/Python-Beginner-Course?style=social"/></a>
     <a href="https://img.shields.io/github/forks/aurimas13/Python-Beginner-Course"><img alt="twitter" src="https://img.shields.io/github/forks/aurimas13/Python-Beginner-Course?style=social"/></a>
-    <a href="https://twitter.com/AurimasNausedas"><img alt="twitter" src="https://img.shields.io/twitter/follow/AurimasNausedas?style=social"/></a>
+    <a href="https://twitter.com/aanausedas"><img alt="twitter" src="https://img.shields.io/twitter/follow/aanausedas?style=social"/></a>
 </p>
 
 This course is designed to help you embark on your exciting Python learning journey. Whether you're an absolute beginner or have some prior programming experience, this course aims to provide a solid foundation in Python programming.
