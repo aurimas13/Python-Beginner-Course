@@ -1,5 +1,5 @@
 <p align=center>
-  <img height="222px" src="https://github.com/aurimas13/CodeAcademy-AI-Course/blob/main/Public/Photo/CodeAcademy_baltas.png"/>
+  <img height="222px" src="https://github.com/aurimas13//CodeAcademy-AI-Course/blob/main/Public/Photo/CodeAcademy.png"/>
 </p>
 <p align="center" > 🐍 <b>Python Beginner Course</b> 🎓 </p>
 <p align="center" > <i> Welcome to the Python Beginner Course tailored by me at Code Academy!</i> </p>
